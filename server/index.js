@@ -35,3 +35,9 @@ app.use("/tweets", tweetsRoutes);
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
+
+
+// Post tweet
+app.post("/tweets", (req, res) => {
+  
+  });
