@@ -26,9 +26,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .bold-font {
+.bold-font {
   font-weight: bold;
 }
+
+
 
 main {
   width: 90%;
