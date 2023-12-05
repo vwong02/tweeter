@@ -2,7 +2,7 @@ $(document).ready(function () {
   // --- our code goes here ---
   console.log("HELLLOOO");
 
-  $("#new-tweet-form").on('keypress', "textarea", function () {
+  $("#new-tweet-form").on('keydown', "textarea", function () {
     console.log(this); //The this keyword is a reference to the button
 
     const charCount = $(this).val().length;
@@ -10,6 +10,13 @@ $(document).ready(function () {
 
     const counter = $(this).parent().children().children('.counter');
     counter.text(charsLeft);
+
+    if (charsLeft < 0) {
+      counter.css("color", "#f13a1a");
+    } else {
+      counter.css("color", "#545149");
+    }
+
 
   });
 
