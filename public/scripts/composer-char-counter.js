@@ -2,7 +2,7 @@ $(document).ready(function () {
   // --- our code goes here ---
   console.log("HELLLOOO");
 
-  $("#new-tweet-form").on('keydown', "textarea", function () {
+  $("#new-tweet-form").on('input', "textarea", function () {
     console.log(this); //The this keyword is a reference to the button
 
     const charCount = $(this).val().length;
