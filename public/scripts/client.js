@@ -65,21 +65,18 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = function(tweetsArr) {
+
     // loops through tweets
-    for (const tweetInfo of tweets) {
+    for (const tweetInfo of tweetsArr) {
 
       // calls createTweetElement for each tweet
       const tweet = createTweetElement(tweetInfo);
 
       // takes return value and appends it to the tweets container
-      $("#tweet-container").append(tweet);
-
+      $("#tweet-container").append(tweetInfo);
     }
   };
-
-  renderTweets(data);
-
 
   /* Form Submission */
 
@@ -89,17 +86,24 @@ $(document).ready(function() {
       event.preventDefault();
 
       const serializedData = $(data).serialize();
-
       console.log("Submit button was clicked, performing AJAX call...");
 
-      $.post("http://localhost:8080/tweets", serializedData);
-
+      $.post("/tweets", serializedData);
       console.log("Post for submit button");
 
     });
   };
-
   submitTweet(renderTweets);
+
+
+  const loadTweets = function() {
+    $.get("/tweets")
+    .then(function(tweets) {
+      console.log("Getting tweets from the tweets database")
+      renderTweets(tweets)
+    })
+  }
+  loadTweets();
 
 
   // Test / driver code (temporary). Eventually will get this from the server.
