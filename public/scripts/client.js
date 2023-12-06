@@ -37,7 +37,7 @@ $(document).ready(function() {
   ];
 
   const createTweetElement = function(tweetData) {
-    const $tweet = `
+    const tweet = `
     <article class="tweet-container">
           <header>
             <div class="tweet-header">
@@ -62,48 +62,44 @@ $(document).ready(function() {
           </footer>
         </article>
   `;
-    return $tweet;
+    return tweet;
   };
-
+  
+  
+  
+  /* AJAX GET request to get tweets from the tweets database (/tweets) */
+  const loadTweets = function() {
+    $.get("/tweets")
+    .then((tweetsArr) => renderTweets(tweetsArr))
+    .catch(err => console.log(err))
+  }
+  loadTweets();
+  
+  /* Render tweets into the tweets-container */
   const renderTweets = function(tweetsArr) {
-
     // loops through tweets
     for (const tweetInfo of tweetsArr) {
-
       // calls createTweetElement for each tweet
-      const tweet = createTweetElement(tweetInfo);
-
+      const $tweets = createTweetElement(tweetInfo);
       // takes return value and appends it to the tweets container
-      $("#tweet-container").append(tweetInfo);
+      $("#tweets-container").append($tweets);
     }
   };
 
   /* Form Submission */
-
   const submitTweet = function() {
-
     $("#new-tweet-form").on("submit", function(event) {
       event.preventDefault();
-
       const serializedData = $(data).serialize();
-      console.log("Submit button was clicked, performing AJAX call...");
-
-      $.post("/tweets", serializedData);
+      
       console.log("Post for submit button");
 
+      $.post("/tweets", serializedData)
+      .then(() => loadTweets())
+      .catch(err => console.log(err))
     });
   };
-  submitTweet(renderTweets);
 
-
-  const loadTweets = function() {
-    $.get("/tweets")
-    .then(function(tweets) {
-      console.log("Getting tweets from the tweets database")
-      renderTweets(tweets)
-    })
-  }
-  loadTweets();
 
 
   // Test / driver code (temporary). Eventually will get this from the server.
