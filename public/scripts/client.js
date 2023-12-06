@@ -10,31 +10,6 @@ $(document).ready(function() {
   // --- our code goes here ---
   console.log("client.js ready");
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
   const createTweetElement = function(tweetData) {
     const tweet = `
@@ -51,7 +26,7 @@ $(document).ready(function() {
           </header>
           
           <footer>
-            <p>${ tweetData.created_at }</p>
+            <p>${ timeago.format(tweetData.created_at) }</p>
             <div class="social-icons">
               <i class="fas fa-flag"></i>
               <!-- <i class="fa-regular fa-flag"></i> -->
@@ -64,17 +39,17 @@ $(document).ready(function() {
   `;
     return tweet;
   };
-  
-  
-  
+
+
+
   /* AJAX GET request to get tweets from the tweets database (/tweets) */
   const loadTweets = function() {
     $.get("/tweets")
-    .then((tweetsArr) => renderTweets(tweetsArr))
-    .catch(err => console.log(err))
-  }
+      .then((tweetsArr) => renderTweets(tweetsArr))
+      .catch(err => console.log(err));
+  };
   loadTweets();
-  
+
   /* Render tweets into the tweets-container */
   const renderTweets = function(tweetsArr) {
     // loops through tweets
@@ -91,12 +66,12 @@ $(document).ready(function() {
     $("#new-tweet-form").on("submit", function(event) {
       event.preventDefault();
       const serializedData = $(data).serialize();
-      
+
       console.log("Post for submit button");
 
       $.post("/tweets", serializedData)
-      .then(() => loadTweets())
-      .catch(err => console.log(err))
+        .then(() => loadTweets())
+        .catch(err => console.log(err));
     });
   };
 
