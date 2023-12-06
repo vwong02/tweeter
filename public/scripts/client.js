@@ -68,16 +68,16 @@ $(document).ready(function() {
       
       const serializedData = $(this).serialize();
       
-      // if($("#textarea").val().length > 140) {
-      //   $("#textarea").popup("Your tweet exceeds 140 characters")
-      //   return;
-      // }
+      if($("#textarea").val().length > 140) {
+        window.alert("Your tweet exceeds 140 characters!")
+        return;
+      }
       
       $.post("/tweets", serializedData)
       .then(() => loadTweets())
+      .then(() => this.reset())
+      .then(() => $(".counter").text(140))
       .catch(err => console.log(err));
-
-      this.reset()
 
     });
   };
