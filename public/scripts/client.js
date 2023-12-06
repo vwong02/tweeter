@@ -81,8 +81,8 @@ $(document).ready(function() {
     for (const tweetInfo of tweetsArr) {
       // calls createTweetElement for each tweet
       const $tweets = createTweetElement(tweetInfo);
-      // takes return value and appends it to the tweets container
-      $("#tweets-container").append($tweets);
+      // takes return value and prepends it to the tweets container
+      $("#tweets-container").prepend($tweets);
     }
   };
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
 
   // Test / driver code (temporary)
   console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  $('#tweets-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 
 
