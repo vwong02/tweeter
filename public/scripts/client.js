@@ -67,7 +67,10 @@ $(document).ready(function() {
       event.preventDefault();
       const serializedData = $(data).serialize();
 
-      console.log("Post for submit button");
+      // if($("#textarea").val().length > 140) {
+      //   alert("Your tweet exceeds 140 characters")
+      //   return;
+      // }
 
       $.post("/tweets", serializedData)
         .then(() => loadTweets())
