@@ -65,42 +65,22 @@ $(document).ready(function() {
   const submitTweet = function() {
     $("#new-tweet-form").on("submit", function(event) {
       event.preventDefault();
-      const serializedData = $(data).serialize();
-
+      
+      const serializedData = $(this).serialize();
+      
       // if($("#textarea").val().length > 140) {
-      //   alert("Your tweet exceeds 140 characters")
+      //   $("#textarea").popup("Your tweet exceeds 140 characters")
       //   return;
       // }
-
+      
       $.post("/tweets", serializedData)
-        .then(() => loadTweets())
-        .catch(err => console.log(err));
+      .then(() => loadTweets())
+      .catch(err => console.log(err));
+
+      this.reset()
+
     });
   };
-
-
-
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  };
-
-  const $tweet = createTweetElement(tweetData);
-
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-
-
-
+  submitTweet()
 });
 
