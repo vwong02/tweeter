@@ -5,7 +5,7 @@
  */
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
   // --- our code goes here ---
   console.log("client.js ready");
@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
   ];
 
-  const createTweetElement = function (tweetData) {
+  const createTweetElement = function(tweetData) {
     const $tweet = `
     <article class="tweet-container">
           <header>
@@ -70,15 +70,37 @@ $(document).ready(function () {
     for (const tweetInfo of tweets) {
 
       // calls createTweetElement for each tweet
-      const tweet = createTweetElement(tweetInfo)
-      
+      const tweet = createTweetElement(tweetInfo);
+
       // takes return value and appends it to the tweets container
-      $("#tweet-container").append(tweet)
+      $("#tweet-container").append(tweet);
 
     }
   };
-  
+
   renderTweets(data);
+
+
+  /* Form Submission */
+
+  const submitTweet = function() {
+
+    $("#new-tweet-form").on("submit", function(event) {
+      event.preventDefault();
+
+      const serializedData = $(data).serialize();
+
+      console.log("Submit button was clicked, performing AJAX call...");
+
+      $.post("http://localhost:8080/tweets", serializedData);
+
+      console.log("Post for submit button");
+
+    });
+  };
+
+  submitTweet(renderTweets);
+
 
   // Test / driver code (temporary). Eventually will get this from the server.
   const tweetData = {
@@ -98,6 +120,9 @@ $(document).ready(function () {
   // Test / driver code (temporary)
   console.log($tweet); // to see what it looks like
   $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+
+
+
 
 });
 
