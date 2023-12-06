@@ -73,6 +73,11 @@ $(document).ready(function() {
         return;
       }
       
+      if($("#textarea").val().length === 0) {
+        window.alert("There's no message in your tweet!")
+        return;
+      }
+      
       $.post("/tweets", serializedData)
       .then(() => loadTweets())
       .then(() => this.reset())
