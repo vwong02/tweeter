@@ -1,0 +1,12 @@
+#top-page-icon {
+  width: 97%;
+  display: inline-flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 1%;
+  right: 1%
+}
+
+.fa-circle-chevron-up {
+  width: 2em;
+}

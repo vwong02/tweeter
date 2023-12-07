@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/tweeter-feed.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/top-page-btn.css" type="text/css"/>
 
 
     <!-- External JS -->
@@ -30,10 +31,13 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/composer-top-btn.js"></script>
 
   </head>
 
   <body>
+    <a id="top-of-page"></a>
+
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="left-nav">
@@ -41,11 +45,11 @@
       </div>
       <div class="right-nav">
         <span><span class="bold-font"> Write</span> a new Tweet</span>
-
         <i class="fa-solid fa-angles-down" style="color: #f13a1a;"></i>
       </div>
     </nav>
 
+    <!-- PROFILE HEADER SECTION -->
     <header id="profile-header">
       <div>
         <img src="/images/profile-hex.png">
@@ -59,34 +63,34 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <!-- NEW TWEET SECTION -->
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form Content-Type="application/x-www-form-urlencoded" action="/tweets" method="POST" id="new-tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="textarea"></textarea>
-
           <div class="submit-container">
-
             <div class="submit-error">
               <button type="submit" id="submit-btn">Tweet</button>
               <span class="error-msg" id="no-char-error">Error: There's no message in your tweet!</span>
               <span class="error-msg" id="too-many-error">Error: The limit does exist... (hint: it's 140 characters!)</span>
             </div>
-
               <div id="counter">
                 <output name="counter" class="counter" for="tweet-text">140</output>
               </div>
-
           </div>
-
-
         </form>
       </section>
 
-      <!-- TWEET CONTAINERS -->
-        <section id="tweets-container"></section>
-
+      <!-- TWEETER FEED SECTION -->
+      <section id="tweets-container"></section>
+    
+      <!-- BACK TO TOP BTN -->
+      <div id="top-page-icon">
+        <a href="#top-of-page">
+          <i class="fa-solid fa-circle-chevron-up" style="color: #545149;"></i>
+        </a>
+      </div>
     </main>
-  </body>
 
+  </body>
 </html>
