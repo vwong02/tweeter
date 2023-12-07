@@ -74,7 +74,7 @@ $(document).ready(function() {
       event.preventDefault();
       const serializedData = $(this).serialize();
 
-      $(".error-msg").slideUp()
+      $(".error-msg").hide()
       
       if($("#textarea").val().length > 140) {
         $("#too-many-error").slideDown()

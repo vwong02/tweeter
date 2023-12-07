@@ -66,14 +66,17 @@
           <textarea name="text" id="textarea"></textarea>
 
           <div class="submit-container">
+
             <div class="submit-error">
               <button type="submit" id="submit-btn">Tweet</button>
-              
-              <!-- Errors Section -->
-              <span class="error-msg" id="no-char-error">Error: There's no message in your tweet! </span>
-              <span class="error-msg" id="too-many-error">Error: Your tweet exceeds 140 characters!</span>
+              <span class="error-msg" id="no-char-error">Error: There's no message in your tweet!</span>
+              <span class="error-msg" id="too-many-error">Error: The limit does exist... (hint: it's 140 characters!)</span>
             </div>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+
+              <div id="counter">
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+
           </div>
 
 
