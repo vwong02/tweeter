@@ -3,10 +3,14 @@
   display: inline-flex;
   justify-content: flex-end;
   position: fixed;
-  bottom: 1%;
-  right: 1%
+  bottom: 3.5%;
+  right: 0.5%;
 }
 
 .fa-circle-chevron-up {
   width: 2em;
+}
+
+.fa-circle-chevron-up:hover{
+  cursor: pointer;
 }
