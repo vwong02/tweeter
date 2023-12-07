@@ -1,19 +1,24 @@
 #profile-header {
-  width: 40rem;
-  height: 40rem;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #c5cbe3;
   background-image: url(/images/nav-background.png);
-
   position: fixed;
-  top: 30%;
+  top: 33%;
 
 }
 
 #profile-header img {
-  width: 10em;
-  height: 10em;
+  width: 8em;
+  height: 8em;
+  margin-bottom: 1rem;
+}
+
+#profile-header span {
+  font-size: 3rem;
 }

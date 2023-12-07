@@ -37,14 +37,16 @@ html {
 main {
   display: flex; 
   flex-direction: column; 
+  width: 60%;
   
 }
 
 .row-layout {
   display: flex; 
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 /* Top of Page button */
