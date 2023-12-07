@@ -7,9 +7,16 @@
 
 $(document).ready(function() {
 
-  // --- our code goes here ---
-  console.log("client.js ready");
+  $(".error-msg").hide()
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  const textFromUser = `<script>alert('XSS attack!');</script>`
+  const safeHTML = `<p>${escape(textFromUser)}</p>`;
+  console.log(safeHTML)
 
   const createTweetElement = function(tweetData) {
     const tweet = `
@@ -17,12 +24,12 @@ $(document).ready(function() {
           <header>
             <div class="tweet-header">
               <div class="user-info">
-                <img "user-avatar" src=${ tweetData.user.avatars }>
-                <p class="bold-font">${ tweetData.user.name }</p>
+                <img "user-avatar" src=${ escape(tweetData.user.avatars) }>
+                <p class="bold-font">${ escape(tweetData.user.name) }</p>
               </div>
-              <p class="bold-font" id="username">${ tweetData.user.handle }</p>
+              <p class="bold-font" id="username">${ escape(tweetData.user.handle) }</p>
             </div>
-            <p id="tweet-content">${ tweetData.content.text }</p> 
+            <p id="tweet-content">${ escape(tweetData.content.text) }</p> 
           </header>
           
           <footer>
@@ -65,22 +72,24 @@ $(document).ready(function() {
   const submitTweet = function() {
     $("#new-tweet-form").on("submit", function(event) {
       event.preventDefault();
-      
       const serializedData = $(this).serialize();
+
+      $(".error-msg").slideUp()
       
       if($("#textarea").val().length > 140) {
-        window.alert("Your tweet exceeds 140 characters!")
+        $("#too-many-error").slideDown()
         return;
       }
       
       if($("#textarea").val().length === 0) {
-        window.alert("There's no message in your tweet!")
+        $("#no-char-error").slideDown()
         return;
       }
       
       $.post("/tweets", serializedData)
       .then(() => loadTweets())
       .then(() => this.reset())
+      .then(() => $(".error-msg").hide())
       .then(() => $(".counter").text(140))
       .catch(err => console.log(err));
 

@@ -20,14 +20,11 @@
   
 }
 
-.submit-container {
+.submit-error {
   padding-top: 0.5em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Bungee', sans-serif;
-  text-align: center;
+  justify-content: start;
+  align-content: center;
 }
 
 #submit-btn {
@@ -38,3 +35,10 @@
   padding: 5px 10px;
 }
 
+.error-msg {
+  margin-top: 0.5em;
+  border: 2px solid red;
+  color: 
+  font-size: 70%;
+
+}
