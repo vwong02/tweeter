@@ -1,11 +1,19 @@
 #profile-header {
-  height: 520px;
-  padding-top: 120px;
-  width: 100%;
+  width: 40rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #c5cbe3;
   background-image: url(/images/nav-background.png);
+
+  position: fixed;
+  top: 30%;
+
+}
+
+#profile-header img {
+  width: 10em;
+  height: 10em;
 }

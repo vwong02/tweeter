@@ -16,17 +16,19 @@
 
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/tweeter-feed.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweeter-feed.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="/styles/media-queries.css" type="text/css"/> -->
 
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/composer.js"></script>
@@ -48,48 +50,59 @@
       </div>
     </nav>
 
-    <!-- PROFILE HEADER SECTION -->
-    <header id="profile-header">
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <h2>Your Name</h2>
-      </div>
-    </header>
+    <div class="row-layout">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+      <!-- PROFILE HEADER SECTION -->
+      <div class="user-profile">
+        <header id="profile-header">
+          <div>
+            <img src="/images/profile-hex.png">
+          </div>
+          <div>
+            <h2>Victoria Wong</h2>
+          </div>
+        </header>
+      </div>
 
-      <!-- NEW TWEET SECTION -->
-      <section class="new-tweet">
-        <form Content-Type="application/x-www-form-urlencoded" action="/tweets" method="POST" id="new-tweet-form">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="textarea"></textarea>
-          <div class="submit-container">
-            <div class="submit-error">
-              <button type="submit" id="submit-btn">Tweet</button>
-              <span class="error-msg" id="no-char-error">Error: There's no message in your tweet!</span>
-              <span class="error-msg" id="too-many-error">Error: The limit does exist... (hint: it's 140 characters!)</span>
-            </div>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+
+        <!-- NEW TWEET SECTION -->
+        <section class="new-tweet">
+
+          <form Content-Type="application/x-www-form-urlencoded" action="/tweets" method="POST" id="new-tweet-form">
+            <label for="tweet-text" class="bold">What are you humming about?</label>
+            <textarea name="text" id="textarea"></textarea>
+
+            <div class="submit-container">
+
+              <div class="submit-error">
+                <button type="submit" id="submit-btn">Tweet</button>
+                <span class="error-msg" id="no-char-error">Error: There's no message in your tweet!</span>
+                <span class="error-msg" id="too-many-error">Error: The limit does exist... (hint: it's 140 characters!)</span>
+              </div>
+
               <div id="counter">
                 <output name="counter" class="counter" for="tweet-text">140</output>
               </div>
-          </div>
-        </form>
-      </section>
 
-      <!-- TWEETER FEED SECTION -->
-      <section id="tweets-container"></section>
-    
-      <!-- BACK TO TOP BTN -->
-      <div id="top-page-icon">
-        <!-- <a href="#top-of-page"> -->
-          <i class="fa-solid fa-circle-chevron-up fa-3x" style="color: #545149;"></i>
-        <!-- </a> -->
-      </div>
+            </div>
+          </form>
+
+        </section>
+
+        <!-- TWEETER FEED SECTION -->
+        <section id="tweets-container"></section>
+
+    </div>
+    <!-- BACK TO TOP BTN -->
+    <div id="top-page-icon">
+      <!-- <a href="#top-of-page"> -->
+      <i class="fa-solid fa-circle-chevron-up fa-3x" style="color: #545149;"></i>
+      <!-- </a> -->
+    </div>
     </main>
 
   </body>
+
 </html>
