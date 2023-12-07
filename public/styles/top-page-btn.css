@@ -1,14 +1,7 @@
-#top-page-icon {
-  width: 97%;
-  display: inline-flex;
-  justify-content: flex-end;
-  position: fixed;
-  bottom: 3.5%;
-  right: 0.5%;
-}
-
 .fa-circle-chevron-up {
-  width: 2em;
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
 }
 
 .fa-circle-chevron-up:hover{
