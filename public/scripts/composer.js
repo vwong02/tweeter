@@ -33,6 +33,7 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: 0 }, 360);
   });
 
+  /* Toggle tweets button */
   const toggleTweet = function() {
     $("#new-tweet").hide();
 

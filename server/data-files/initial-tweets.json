@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1701803184791
+    "created_at": 1701768061022
   },
   {
     "user": {
@@ -19,6 +19,17 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1701889584791
+    "created_at": 1701854461022
+  },
+  {
+    "user": {
+      "name": "Michelle",
+      "avatars": "https://i.imgur.com/3GvwNBf.png",
+      "handle": "@chickynuggies"
+    },
+    "content": {
+      "text": "How do chickens stay so strong? Egg-cersise"
+    },
+    "created_at": 1701940861022
   }
 ]
