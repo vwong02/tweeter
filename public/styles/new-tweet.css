@@ -1,4 +1,4 @@
-.new-tweet {
+#new-tweet {
   width: 100%;
   margin-top: 7rem;
 }
@@ -7,27 +7,36 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  
+
 }
 
 #textarea {
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #6b705C;
   background-color: transparent;
+  resize: none;
 }
 
+
 #submit-btn {
-  background-color: #4053a1;
-  color: #FFFFFF;
+  background-color: #994e42;
+  border-radius: 3rem;
+  color: #f6dcc9;
   border: none;
   font-family: 'Bungee', sans-serif;
-  padding: 5px 10px;
+  padding: 0.5rem 1.5rem;
+
+}
+
+#submit-btn:hover {
+  cursor: pointer;
 }
 
 .error-msg {
-  color: #f13a1a;
+  color: #ff6e58;
   font-size: 70%;
   margin-left: 1rem;
+  font-weight: bold;
 }
 
 .submit-error {
@@ -45,4 +54,9 @@
 
 #counter {
   font-family: 'Bungee', sans-serif;
+  color: #6b705C;
+}
+
+#user-name {
+  color: #f6dcc9;
 }

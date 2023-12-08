@@ -15,8 +15,7 @@ html {
  */
  
  body {
-   color: #545149;
-   background-color: #f4f1ec;
+   color: #6b705C;
    font-size: 24px;
    font-family: 'Source Sans 3', sans-serif;
    
@@ -28,6 +27,7 @@ html {
   
 html {
   font-size: 62.5%;
+
 }
 
 .bold-font {
@@ -45,8 +45,10 @@ main {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  background-color: #EAEAE3;
+  /* background-image: url(/images/nav-background.png); */
 }
 
 /* Top of Page button */

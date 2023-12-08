@@ -77,12 +77,19 @@ $(document).ready(function() {
       $(".error-msg").hide()
       
       if($("#textarea").val().length > 140) {
-        $("#too-many-error").slideDown()
+        $("#too-many-error").fadeIn()
+        if (("#too-many-error:visible")) {
+          setTimeout(() => $("#too-many-error").fadeOut(), 1500)
+        }
         return;
       }
       
+      
       if($("#textarea").val().length === 0) {
-        $("#no-char-error").slideDown()
+        $("#no-char-error").fadeIn("fast")
+        if ($("#no-char-error:visible")) {
+          setTimeout(() => $("#no-char-error").fadeOut("fast"), 1500)
+        }
         return;
       }
       
@@ -96,5 +103,7 @@ $(document).ready(function() {
     });
   };
   submitTweet()
+
 });
+
 

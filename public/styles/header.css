@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #c5cbe3;
-  background-image: url(/images/nav-background.png);
+  background-color: #994e42;
+  opacity: 90%;
   position: fixed;
   top: 33%;
 
@@ -21,4 +21,6 @@
 
 #profile-header span {
   font-size: 3rem;
+  opacity: 100%;
 }
+
