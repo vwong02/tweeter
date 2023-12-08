@@ -10,6 +10,7 @@
   opacity: 90%;
   position: fixed;
   top: 33%;
+  box-shadow: 0 0 0.5rem #181a10;
 
 }
 
@@ -22,5 +23,6 @@
 #profile-header span {
   font-size: 3rem;
   opacity: 100%;
+  text-shadow: 0 0 0.5rem #181a10;
 }
 

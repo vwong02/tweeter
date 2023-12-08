@@ -7,16 +7,13 @@
 
 $(document).ready(function() {
 
-  $(".error-msg").hide()
+  $(".error-msg").hide();
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  const textFromUser = `<script>alert('XSS attack!');</script>`
-  const safeHTML = `<p>${escape(textFromUser)}</p>`;
-  console.log(safeHTML)
 
   const createTweetElement = function(tweetData) {
     const tweet = `
@@ -27,7 +24,7 @@ $(document).ready(function() {
                 <img "user-avatar" src=${ escape(tweetData.user.avatars) }>
                 <p class="bold-font">${ escape(tweetData.user.name) }</p>
               </div>
-              <p class="bold-font" id="username">${ escape(tweetData.user.handle) }</p>
+              <p id="username">${ escape(tweetData.user.handle) }</p>
             </div>
             <p id="tweet-content">${ escape(tweetData.content.text) }</p> 
           </header>
@@ -48,8 +45,7 @@ $(document).ready(function() {
   };
 
 
-
-  /* AJAX GET request to get tweets from the tweets database (/tweets) */
+  /* AJAX GET request for the tweets from database */
   const loadTweets = function() {
     $.get("/tweets")
       .then((tweetsArr) => renderTweets(tweetsArr))
@@ -74,35 +70,34 @@ $(document).ready(function() {
       event.preventDefault();
       const serializedData = $(this).serialize();
 
-      $(".error-msg").hide()
-      
-      if($("#textarea").val().length > 140) {
-        $("#too-many-error").fadeIn()
+      $(".error-msg").hide();
+
+      if ($("#textarea").val().length > 140) {
+        $("#too-many-error").fadeIn();
         if (("#too-many-error:visible")) {
-          setTimeout(() => $("#too-many-error").fadeOut(), 1500)
+          setTimeout(() => $("#too-many-error").fadeOut(), 1500);
         }
         return;
       }
-      
-      
-      if($("#textarea").val().length === 0) {
-        $("#no-char-error").fadeIn("fast")
+
+      if ($("#textarea").val().length === 0) {
+        $("#no-char-error").fadeIn("fast");
         if ($("#no-char-error:visible")) {
-          setTimeout(() => $("#no-char-error").fadeOut("fast"), 1500)
+          setTimeout(() => $("#no-char-error").fadeOut("fast"), 1500);
         }
         return;
       }
-      
+
       $.post("/tweets", serializedData)
-      .then(() => loadTweets())
-      .then(() => this.reset())
-      .then(() => $(".error-msg").hide())
-      .then(() => $(".counter").text(140))
-      .catch(err => console.log(err));
+        .then(() => loadTweets())
+        .then(() => this.reset())
+        .then(() => $(".error-msg").hide())
+        .then(() => $(".counter").text(140))
+        .catch(err => console.log(err));
 
     });
   };
-  submitTweet()
+  submitTweet();
 
 });
 
