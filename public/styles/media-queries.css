@@ -86,8 +86,8 @@
 /* Tablet Styles */
 @media only screen and (min-width: 701px) and (max-width: 1023px) {
   main {
-    width: 70%;
-    font-size: 65%;
+    width: 100%;
+    font-size: 70%;
   }
 
   nav {

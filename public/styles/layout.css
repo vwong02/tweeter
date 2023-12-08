@@ -46,7 +46,7 @@ main {
 .row-layout {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  justify-content: center;
   padding-left: 10rem;
   padding-right: 10rem;
 }
