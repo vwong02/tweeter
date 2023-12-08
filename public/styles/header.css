@@ -1,28 +1,28 @@
 #profile-header {
-  width: 35rem;
-  height: 35rem;
+  width: 25rem;
+  height: 25rem;
   border-radius: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #994e42;
-  opacity: 90%;
-  position: fixed;
+  background-color: #63beb4;
+  position: sticky;
   top: 33%;
-  box-shadow: 0 0 0.5rem #181a10;
+  box-shadow: 0 0 0.5rem #457b9d;
 
 }
 
 #profile-header img {
-  width: 8em;
-  height: 8em;
+  width: 5.5em;
+  height: 5.5em;
   margin-bottom: 1rem;
 }
 
 #profile-header span {
   font-size: 3rem;
   opacity: 100%;
-  text-shadow: 0 0 0.5rem #181a10;
+  color: #FAF9F6;
+  text-shadow: 0 0 0.3rem #457b9d;
 }
 

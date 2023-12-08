@@ -1,14 +1,15 @@
 nav {
   width: 100%;
-  background: #994e42;
-  color: #f6dcc9;
+  background: #1d3557;
+  color: #FAF9F6;
   height: 12rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  box-shadow: 0 0 0.5rem #181a10;
+  box-shadow: 0 0 0.rem #181a10;
+  z-index: 1;
 }
 
 .left-nav {
@@ -27,7 +28,7 @@ nav {
 .compose-btn{
   border: none;
   background-color: transparent;
-  color: #f6dcc9;
+  color: #FAF9F6;
 }
 
 .compose-btn :hover {

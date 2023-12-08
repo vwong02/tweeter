@@ -12,19 +12,21 @@
 
 #textarea {
   border: none;
-  border-bottom: 2px solid #6b705C;
+  border-bottom: 2px solid #1d3557;
   background-color: transparent;
   resize: none;
 }
 
 
 #submit-btn {
-  background-color: #994e42;
+  background-color: #1d3557;
   border-radius: 3rem;
-  color: #f6dcc9;
+  color: #fefefe;
   border: none;
   font-family: 'Bungee', sans-serif;
   padding: 0.5rem 1.5rem;
+  box-shadow: 0 0 0.2rem #0c1a2d;
+  font-size: 1.8rem;
 
 }
 
@@ -33,7 +35,7 @@
 }
 
 .error-msg {
-  color: #ff6e58;
+  color: #e63946;
   font-size: 70%;
   margin-left: 1rem;
   font-weight: bold;
@@ -54,7 +56,7 @@
 
 #counter {
   font-family: 'Bungee', sans-serif;
-  color: #6b705C;
+  color: #2a5976;
 }
 
 #user-name {

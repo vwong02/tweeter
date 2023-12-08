@@ -6,14 +6,14 @@
 .tweet-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
-  border: 0.2rem solid #8b907c;
+  margin-bottom: 5rem;
+  border: 0.1rem solid #2a5976;
   border-radius: 1em;
   font-size: 90%;
 }
 
 .tweet-container:hover {
-  box-shadow: 0 0 1rem #B7B7A4;
+  box-shadow: 0 0 0.2rem #1d3557;
 }
 
 #tweet-content {
@@ -45,7 +45,7 @@
 }
 
 #username {
-  color: #B7B7A4;
+  color: #457b9d;
 }
 
 .tweet-container footer {
@@ -53,10 +53,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.2rem solid #8b907c;
+  border-top: 0.15rem solid #457b9d;
   width: 95%;
   margin: 0 auto;
-  font-size: 75%;
+  font-size: 90%;
 
 }
 
@@ -65,10 +65,9 @@
 }
 
 .social-icons {
-  color: #CB997E;
+  color: #457b9d;
 }
 
 .social-icons i:hover {
-  color: #ff6e58;
-  opacity: 80%;
+  color: #e63946;
 }

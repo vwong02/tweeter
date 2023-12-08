@@ -6,28 +6,30 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
- 
- body {
-   color: #6b705C;
-   font-size: 24px;
-   font-family: 'Source Sans 3', sans-serif;
-   
-  }
-  
-  /*
+
+body {
+  color: #457b9d;
+  font-size: 24px;
+  font-family: 'Source Sans 3', sans-serif;
+
+}
+
+/*
   * Additional CSS can be defined below or in other CSS files, as per instructions
   */
-  
+
 html {
   font-size: 62.5%;
-
 }
 
 .bold-font {
@@ -35,29 +37,29 @@ html {
 }
 
 main {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   width: 60%;
-  
+
 }
 
 .row-layout {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 12%;
   padding-right: 12%;
-  background-color: #f1eee8;
+  background-color: #ffffff;
   background-image: url(/images/nav-background.png);
 }
 
 /* Top of Page button */
 .fa-circle-chevron-up {
   position: fixed;
-  bottom: 0.5em;
-  right: 0.5em;
+  bottom: 3rem;
+  right: 3rem;
 }
 
-.fa-circle-chevron-up:hover{
+.fa-circle-chevron-up:hover {
   cursor: pointer;
 }
