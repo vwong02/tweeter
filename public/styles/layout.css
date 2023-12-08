@@ -45,10 +45,10 @@ main {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  background-color: #EAEAE3;
-  /* background-image: url(/images/nav-background.png); */
+  padding-left: 12%;
+  padding-right: 12%;
+  background-color: #f1eee8;
+  background-image: url(/images/nav-background.png);
 }
 
 /* Top of Page button */
