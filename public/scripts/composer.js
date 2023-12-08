@@ -14,7 +14,7 @@ $(document).ready(function() {
     if (charsLeft < 0) {
       counter.css("color", "#ff6e58");
     } else {
-      counter.css("color", "#6b705C");
+      counter.css("color", "#457b9d");
     }
   });
 
