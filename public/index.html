@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweeter-feed.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" />
 
 
     <!-- External JS -->
@@ -38,9 +38,6 @@
   </head>
 
   <body>
-    <!-- <a id="top-of-page"></a> -->
-
-    <!-- Top nav bar (fixed) -->
     <nav>
       <div class="left-nav">
         <span>tweeter</span>
@@ -54,77 +51,40 @@
     </nav>
 
     <div class="row-layout">
-      <!-- PROFILE HEADER SECTION -->
       <div class="user-profile">
         <header id="profile-header">
           <div>
             <img src="/images/profile-hex.png">
           </div>
           <div>
-            <span id="user-name"class="bold-font">Victoria Wong</span>
+            <span id="user-name" class="bold-font">Victoria Wong</span>
           </div>
         </header>
       </div>
 
-      <!-- Page-specific (main) content here -->
       <main class="container">
-
-        <!-- NEW TWEET SECTION -->
         <section id="new-tweet">
-
           <form Content-Type="application/x-www-form-urlencoded" action="/tweets" method="POST" id="new-tweet-form">
             <label for="tweet-text" class="bold-font">What are you humming about?</label>
-            <textarea name="text" id="textarea" ></textarea>
-
+            <textarea name="text" id="textarea"></textarea>
             <div class="submit-container">
-
               <div class="submit-error">
                 <button type="submit" id="submit-btn">Tweet</button>
                 <span class="error-msg" id="no-char-error">Error: There's no message in your tweet!</span>
                 <span class="error-msg" id="too-many-error">Error: The limit does exist... (hint: it's 140 characters!)</span>
               </div>
-
               <div id="counter">
                 <output name="counter" class="counter" for="tweet-text">140</output>
               </div>
-
             </div>
           </form>
-
         </section>
-
-        <!-- TWEETER FEED SECTION -->
         <section id="tweets-container"></section>
-
     </div>
-    <!-- BACK TO TOP BTN -->
     <div id="top-page-icon">
-      <!-- <a href="#top-of-page"> -->
       <i class="fa-solid fa-circle-chevron-up fa-3x" style="color: #63beb4"></i>
-      <!-- </a> -->
     </div>
     </main>
-
   </body>
 
 </html>
-
-<!-- 
-
-/* 
-Rust - #994e42
-Light Sage - #B7B7A4
-Dark Sage - #6b705C
-Sea Foam - #97a495
-Slate - #EAE3EA
-Light Peach - #FFE8D6
-Light Pink for Font - #fef0e6
-Dark Peachy Nude - #DDBEA9
-Dark Nude - #CB997E
-Medium Berry - #723D46
-Coral - #E26D5C
-Off White (Green Tone)- #EAEAE3
-*/
-
-
- -->
