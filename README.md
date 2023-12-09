@@ -29,19 +29,19 @@ This project  is built using the [Tweeter Template](https://github.com/lighthous
 ## Project Features
 
 1. Sumbit a new tweet form
-![Video of a user composing a new tweet](.docs/new-tweet.mp4)
+![Video of a user composing a new tweet]()
 
 Users can create and submite a new tweet. Once submitted, the tweet will display on the top of the feed.
 
 2. Compose a New Tweet Toggle Button
-![Video of the toggle new tweet button being clicked](.docs/toggle-btn.mp4)
+![Video of the toggle new tweet button being clicked]()
 
 "Write a new tweet button":
 - If the new tweet form is hidden, then clicking the button will show the form with the textarea in focus.
 - If the new tweet is showing, then clicking the button will hide it. 
 
 3. Go To Top of Page Button
-![Video of the go to top of page button being clicked](.docs/top-page-btn.mp4)
+![Video of the go to top of page button being clicked]()
 
 - When a user starts scrolling, a "Go To Top of Page" button will appear in the bottom-right corner of the page. Clicking this button, will bring users back to the top of the page. 
 - The button will only be visible once the user starts scrolling. Otherwise, it is hidden on the page.
@@ -52,7 +52,7 @@ Users can create and submite a new tweet. Once submitted, the tweet will display
 The web page has different layouts to accomodate different screen sizes.
 
 5. Error Display
-![Video of an error when trying to tweet an empty message](.docs/error-msg.mp4)
+![Video of an error when trying to tweet an empty message]()
 
 - When a user submits an empty tweet, an error message will appear.
 - When a user submits a tweet that exceeds 140 characters, an error will appear.
