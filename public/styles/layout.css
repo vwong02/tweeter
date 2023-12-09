@@ -23,6 +23,8 @@ body {
   font-family: 'Source Sans 3', sans-serif;
   background-color: #ffffff;
   background-image: url(/images/nav-background.png);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /*
