@@ -46,7 +46,7 @@ Users can create and submite a new tweet. Once submitted, the tweet will display
 - The button will only be visible once the user starts scrolling. Otherwise, it is hidden on the page.
 
 4. Responsive Design
-![Video of the responsive design layouts](https://github.com/vwong02/tweeter/assets/140195741/a7a38214-0dbc-4ed7-a985-b9d48787e1df)
+![Video of the responsive design layouts](https://imgur.com/a/nAo3K5k)
 The web page has different layouts to accomodate different screen sizes.
 
 5. Error Display
