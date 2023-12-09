@@ -48,6 +48,7 @@ $(document).ready(function() {
 
   /* Render tweets into the tweets-container */
   const renderTweets = function(tweetsArr) {
+    $("#tweets-container").empty();
     // loops through tweets
     for (const tweetInfo of tweetsArr) {
       // calls createTweetElement for each tweet

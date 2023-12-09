@@ -25,6 +25,7 @@ body {
   background-image: url(/images/nav-background.png);
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 /*
