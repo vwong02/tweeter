@@ -29,12 +29,12 @@ This project  is built using the [Tweeter Template](https://github.com/lighthous
 ## Project Features
 
 1. Sumbit a new tweet form
-![Video of a user composing a new tweet](.docs/new-tweet.mp4)
-
+![Video of a user composing a new tweet](https://github.com/vwong02/tweeter/assets/140195741/6b1bd103-ff8c-4ba5-af6f-d45515394636)
 Users can create and submite a new tweet. Once submitted, the tweet will display on the top of the feed.
 
 2. Compose a New Tweet Toggle Button
-![Video of the toggle new tweet button being clicked](.docs/toggle-btn.mp4)
+![Video of the toggle new tweet button being clicked](https://github.com/vwong02/tweeter/assets/140195741/497e0005-c5dc-4338-900c-9b9a0dd38ebc)
+
 
 "Write a new tweet button":
 - If the new tweet form is hidden, then clicking the button will show the form with the textarea in focus.
