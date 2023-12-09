@@ -46,7 +46,7 @@ Users can create and submite a new tweet. Once submitted, the tweet will display
 - The button will only be visible once the user starts scrolling. Otherwise, it is hidden on the page.
 
 4. Responsive Design
-![Video of the responsive design layouts](https://imgur.com/a/nAo3K5k)
+![Video of the responsive design layouts](https://i.imgur.com/1iMfTe1.mp4)
 The web page has different layouts to accomodate different screen sizes.
 
 5. Error Display
