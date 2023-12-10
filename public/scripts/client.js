@@ -14,10 +14,10 @@ $(document).ready(function() {
           <header>
             <div class="tweet-header">
               <div class="user-info">
-                <img "user-avatar" src=${ escape(tweetData.user.avatars) }>
-                <p class="bold-font">${ escape(tweetData.user.name) }</p>
+                <img "user-avatar" src=${ tweetData.user.avatars }>
+                <p class="bold-font">${ tweetData.user.name }</p>
               </div>
-              <p id="username">${ escape(tweetData.user.handle) }</p>
+              <p id="username">${ tweetData.user.handle }</p>
             </div>
             <p id="tweet-content">${ escape(tweetData.content.text) }</p> 
           </header>
