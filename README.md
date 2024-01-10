@@ -8,6 +8,7 @@ This project  is built using the [Tweeter Template](https://github.com/lighthous
 - [Getting Started](#getting-started)
 - [Dependencies](#dependencies)
 - [Project Features](#project-features)
+- [Project Link](#live-link)
 
 ## Getting Started
 
@@ -55,3 +56,7 @@ The web page has different layouts to accomodate different screen sizes.
 - When a user submits an empty tweet, an error message will appear.
 - When a user submits a tweet that exceeds 140 characters, an error will appear.
 - Error messages will automatically disappear after 1.5 seconds. 
+
+## Project Link
+
+**Visit the live project: https://tweeter-m8ef.onrender.com/**
